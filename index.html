@@ -52,8 +52,8 @@
   header.hero {
     position: relative; overflow: hidden; padding: 96px 0 88px;
     background:
-      linear-gradient(90deg, var(--bg) 35%, rgba(11,26,46,.6) 70%, rgba(11,26,46,.85)),
-      url("assets/banner.jpeg") right center / cover no-repeat;
+      linear-gradient(90deg, var(--bg) 30%, rgba(11,26,46,.88) 60%, rgba(11,26,46,.72)),
+      url("assets/banner.jpeg") right bottom / auto 260% no-repeat;
     border-bottom: 1px solid var(--line);
   }
   .hero .eyebrow { color: var(--gold); font-weight: 600; letter-spacing: .14em;
@@ -75,7 +75,9 @@
   .section-head p { color: var(--muted); margin: 14px 0 0; }
 
   .grid { display: grid; gap: 20px; }
-  .grid.four { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .grid.four { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 1000px) { .grid.four { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .grid.four { grid-template-columns: 1fr; } }
   .grid.three { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; }
   .card h3 { font-size: 18px; margin: 14px 0 10px; }
@@ -114,8 +116,8 @@
   @media (max-width: 760px) {
     nav ul { display: none; }
     header.hero { padding: 64px 0 60px;
-      background: linear-gradient(180deg, rgba(11,26,46,.7), var(--bg) 85%),
-                  url("assets/banner.jpeg") 75% center / cover no-repeat; }
+      background: linear-gradient(180deg, rgba(11,26,46,.86), var(--bg) 85%),
+                  url("assets/banner.jpeg") right bottom / auto 200% no-repeat; }
     section { padding: 60px 0; }
     .about { grid-template-columns: 1fr; gap: 24px; }
     .about img { width: 140px; height: 140px; }
